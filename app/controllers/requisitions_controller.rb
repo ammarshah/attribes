@@ -15,6 +15,7 @@ class RequisitionsController < ApplicationController
   # GET /requisitions/new
   def new
     @requisition = Requisition.new
+    @requisition.items.build
   end
 
   # GET /requisitions/1/edit

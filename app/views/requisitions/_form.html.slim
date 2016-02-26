@@ -7,6 +7,13 @@
     = f.input :project_name
     = f.input :delivery_date
     = f.input :purpose
+  = f.simple_fields_for :items do |i|
+    .form-inputs
+      = i.input :name
+      = i.input :last_purchase_rate
+      = i.input :last_purchase_amount
+      = i.input :estimated_purchase_rate
+      = i.input :estimated_purchase_amount
 
   .form-actions
     = f.button :submit
