@@ -1,0 +1,24 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @item.name
+p
+  strong Last purchase rate:
+  = @item.last_purchase_rate
+p
+  strong Last purchase amount:
+  = @item.last_purchase_amount
+p
+  strong Estimated purchase rate:
+  = @item.estimated_purchase_rate
+p
+  strong Estimated purchase amount:
+  = @item.estimated_purchase_amount
+p
+  strong Requisition:
+  = @item.requisition
+
+= link_to 'Edit', edit_item_path(@item)
+'|
+= link_to 'Back', items_path

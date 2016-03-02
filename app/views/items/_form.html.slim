@@ -1,0 +1,13 @@
+= simple_form_for(@item) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :last_purchase_rate
+    = f.input :last_purchase_amount
+    = f.input :estimated_purchase_rate
+    = f.input :estimated_purchase_amount
+    = f.association :requisition
+
+  .form-actions
+    = f.button :submit

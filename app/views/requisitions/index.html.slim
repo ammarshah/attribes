@@ -1,0 +1,29 @@
+h1 Listing requisitions
+
+table
+  thead
+    tr
+      th Request by
+      th Request date
+      th Project name
+      th Delivery date
+      th Purpose
+      th
+      th
+      th
+
+  tbody
+    - @requisitions.each do |requisition|
+      tr
+        td = requisition.request_by
+        td = requisition.request_date
+        td = requisition.project_name
+        td = requisition.delivery_date
+        td = requisition.purpose
+        td = link_to 'Show', requisition
+        td = link_to 'Edit', edit_requisition_path(requisition)
+        td = link_to 'Destroy', requisition, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Requisition', new_requisition_path

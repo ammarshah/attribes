@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  request_by: MyString
+  request_date: 2016-02-25
+  project_name: MyString
+  delivery_date: 2016-02-25
+  purpose: MyString
+
+two:
+  request_by: MyString
+  request_date: 2016-02-25
+  project_name: MyString
+  delivery_date: 2016-02-25
+  purpose: MyString

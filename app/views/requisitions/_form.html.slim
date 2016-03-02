@@ -1,0 +1,35 @@
+= simple_form_for(@requisition) do |f|
+  = f.error_notification
+
+  #page-content-wrapper
+  .container-fluid
+    .row
+      .col-lg-12
+        h2 align="center"  Purchase Requisition Form 
+        br /
+        table.table.table-bordered
+          tr
+            td Request By:
+            td
+              = f.input :request_by, label: false, :input_html => { :value => current_user.name}
+            td Request Date:
+            td
+              = f.input :request_date, label: false
+          tr
+            td Project Name:
+            td
+              = f.input :project_name, label: false
+            td Delivery Date:
+            td
+              = f.input :delivery_date, label: false
+          tr
+            td Purpose:
+            td colspan="3" 
+              = f.input :purpose, label: false
+
+  = f.simple_fields_for :items do |item|
+    h2 Items
+    = render 'item_field', f: item
+
+  .form-actions
+    = f.button :submit

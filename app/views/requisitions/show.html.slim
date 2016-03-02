@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong Request by:
+  = @requisition.request_by
+p
+  strong Request date:
+  = @requisition.request_date
+p
+  strong Project name:
+  = @requisition.project_name
+p
+  strong Delivery date:
+  = @requisition.delivery_date
+p
+  strong Purpose:
+  = @requisition.purpose
+
+= link_to 'Edit', edit_requisition_path(@requisition)
+'|
+= link_to 'Back', requisitions_path

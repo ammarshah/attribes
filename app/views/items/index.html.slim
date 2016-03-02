@@ -1,0 +1,31 @@
+h1 Listing items
+
+table
+  thead
+    tr
+      th Name
+      th Last purchase rate
+      th Last purchase amount
+      th Estimated purchase rate
+      th Estimated purchase amount
+      th Requisition
+      th
+      th
+      th
+
+  tbody
+    - @items.each do |item|
+      tr
+        td = item.name
+        td = item.last_purchase_rate
+        td = item.last_purchase_amount
+        td = item.estimated_purchase_rate
+        td = item.estimated_purchase_amount
+        td = item.requisition
+        td = link_to 'Show', item
+        td = link_to 'Edit', edit_item_path(item)
+        td = link_to 'Destroy', item, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Item', new_item_path
