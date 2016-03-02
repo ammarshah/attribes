@@ -11,7 +11,7 @@
           tr
             td Request By:
             td
-              = f.input :request_by, label: false
+              = f.input :request_by, label: false, :input_html => { :value => current_user.name}
             td Request Date:
             td
               = f.input :request_date, label: false

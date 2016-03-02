@@ -1,4 +1,5 @@
 class RequisitionsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_requisition, only: [:show, :edit, :update, :destroy]
 
   # GET /requisitions
@@ -29,6 +30,7 @@ class RequisitionsController < ApplicationController
 
     respond_to do |format|
       if @requisition.save
+        @requisition.update_attribute(:user_id, current_user.id)
         format.html { redirect_to @requisition, notice: 'Requisition was successfully created.' }
         format.json { render :show, status: :created, location: @requisition }
       else
