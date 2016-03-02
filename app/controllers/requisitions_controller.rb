@@ -15,7 +15,7 @@ class RequisitionsController < ApplicationController
   # GET /requisitions/new
   def new
     @requisition = Requisition.new
-    4.times { requisition = @requisition.items.build }
+    @requisition.items.build
   end
 
   # GET /requisitions/1/edit

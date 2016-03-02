@@ -1,6 +1,67 @@
 .nested-fields
-  = f.input :name
-  = f.input :last_purchase_rate
-  = f.input :last_purchase_amount
-  = f.input :estimated_purchase_rate
-  = f.input :estimated_purchase_amount
+ table.table.table-bordered
+  thead
+    tr
+      th ITEMS REQUIRED & DESCRIPTION
+      th colspan="2"  LAST PURCHASE PRICE (Optional)
+      th colspan="2"  ESTIMATED PURCHASE PRICE
+    tr
+      th
+      th Rate
+      th Amount
+      th Rate
+      th Amount
+  tbody
+    tr
+      td
+        = f.input :name, label: false
+      td
+        = f.input :last_purchase_rate, label: false
+      td
+        = f.input :last_purchase_amount, label: false
+      td
+        = f.input :estimated_purchase_rate, label: false
+      td
+        = f.input :estimated_purchase_amount, label: false
+    / tr
+    /   td
+    /     = f.input :name, label: false
+    /   td
+    /     = f.input :last_purchase_rate, label: false
+    /   td
+    /     = f.input :last_purchase_amount, label: false
+    /   td
+    /     = f.input :estimated_purchase_rate, label: false
+    /   td
+    /     = f.input :estimated_purchase_amount, label: false
+    / tr
+    /   td
+    /     = f.input :name, label: false
+    /   td
+    /     = f.input :last_purchase_rate, label: false
+    /   td
+    /     = f.input :last_purchase_amount, label: false
+    /   td
+    /     = f.input :estimated_purchase_rate, label: false
+    /   td
+    /     = f.input :estimated_purchase_amount, label: false
+    / tr
+    /   td
+    /     = f.input :name, label: false
+    /   td
+    /     = f.input :last_purchase_rate, label: false
+    /   td
+    /     = f.input :last_purchase_amount, label: false
+    /   td
+    /     = f.input :estimated_purchase_rate, label: false
+    /   td
+    /     = f.input :estimated_purchase_amount, label: false
+    td
+    td
+      label Total:
+    td
+      input type="number" /
+    td
+      label Total:
+    td
+      input type="number" /
