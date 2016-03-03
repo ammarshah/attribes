@@ -72,6 +72,6 @@ class RequisitionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def requisition_params
-      params.require(:requisition).permit(:request_by, :request_date, :project_name, :delivery_date, :purpose, items_attributes:[:name, :last_purchase_rate, :last_purchase_amount, :estimated_purchase_rate, :estimated_purchase_amount])
+      params.require(:requisition).permit(:request_by, :request_date, :project_name, :delivery_date, :purpose, items_attributes:[:name, :last_purchase_rate, :last_purchase_amount, :estimated_purchase_rate, :estimated_purchase_amount]).merge(user: current_user)
     end
 end
