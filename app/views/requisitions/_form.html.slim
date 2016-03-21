@@ -26,10 +26,25 @@
             td Purpose:
             td colspan="3" 
               = f.input :purpose, label: false
-
-  = f.simple_fields_for :items do |item|
-    h2 Items
-    = render 'item_field', f: item
+  h3 Items
+  #items
+    = f.simple_fields_for :items do |item|
+      table.table.table-bordered
+        thead
+          tr
+            th ITEMS REQUIRED & DESCRIPTION
+            th colspan="2"  LAST PURCHASE PRICE (Optional)
+            th colspan="2"  ESTIMATED PURCHASE PRICE
+          tr
+            th
+            th Rate
+            th Amount
+            th Rate
+            th Amount
+      = render 'item_fields', f: item
+    .links
+      = link_to_add_association 'add item', f, :items
+    = render 'total_fields'
 
   .form-actions
     = f.button :submit
