@@ -14,6 +14,7 @@ group :development do
   gem 'spring'
 end
 gem 'bootstrap-sass'
+gem 'cocoon'
 gem 'devise'
 gem 'figaro'
 gem 'high_voltage'

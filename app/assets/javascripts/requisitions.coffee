@@ -1,3 +1,9 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+$ ->
+  $('#items').on('cocoon:before-insert', ->
+    if $("#items").find(".nested-fields").length == 0
+      $("#total").show()
+    return
+  ).on 'cocoon:after-remove', ->
+    if $("#items").find(".nested-fields").length == 0
+      $("#total").hide()
+    return

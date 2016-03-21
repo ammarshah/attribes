@@ -1,0 +1,13 @@
+.nested-fields
+  table.table.table-bordered
+    td width="34.3%"
+      = f.input :name, label: false
+    td width="13.9%"
+      = f.input :last_purchase_rate, label: false
+    td width="20.6%"
+      = f.input :last_purchase_amount, label: false
+    td width="12.5%"
+      = f.input :estimated_purchase_rate, label: false
+    td width="20.5%"
+      = f.input :estimated_purchase_amount, label: false
+  = link_to_remove_association "remove item", f
